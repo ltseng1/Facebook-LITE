@@ -1,4 +1,4 @@
-all: CA3
+all: main
 
 FBLPost:	FBLPost.o
 		g++ FBLPost.o -o FBLPost
@@ -57,8 +57,8 @@ FBLCommentLL.o:	FBLCommentLL.cpp FBLCommentLL.h
 
 
 
-CA3: 	CA3.o FBLPost.o FBLUser.o FBLUserLL.o FBLUserLLNode.o FBLPostLL.o FBLPostLLNode.o FBLCommentLL.o FBLCommentNode.o FBLComment.o
-	g++ CA3.o FBLPost.o FBLUser.o FBLUserLL.o FBLUserLLNode.o FBLPostLL.o FBLPostLLNode.o FBLCommentLL.o FBLCommentNode.o FBLComment.o -o CA3
+main: 	main.o FBLPost.o FBLUser.o FBLUserLL.o FBLUserLLNode.o FBLPostLL.o FBLPostLLNode.o FBLCommentLL.o FBLCommentNode.o FBLComment.o
+	g++ main.o FBLPost.o FBLUser.o FBLUserLL.o FBLUserLLNode.o FBLPostLL.o FBLPostLLNode.o FBLCommentLL.o FBLCommentNode.o FBLComment.o -o main
 
 clean:
 	rm -f *.o
